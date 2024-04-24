@@ -17,9 +17,10 @@ let esportes = ["futebol", "basquete", "tênis", "vôlei", "handebol", "boxe", "
 let frutas = ["uva", "banana", "manga", "morango", "abacate", "maçã", "graviola", "abacaxi", "damasco", "goiaba", "laranja", "maracujá", "caju", "laranja", "cereja", "melancia", "ameixa", "coco"];
 let animais = ["tartaruga", "macaco", "zebra", "cachorro", "rato", "cavalo", "crocodilo", "urso", "girafa", "mosquito", "foca", "raposa", "canguru", "coala", "panda", "castor", "aranha", "borboleta"];
 
-let randomTema = Math.floor(Math.random() * tema.length);
-let randomPalavra = Math.floor(Math.random() * 16);
-
+//let randomTema = Math.floor(Math.random() * tema.length);
+//let randomPalavra = Math.floor(Math.random() * 16);
+let randomTema = 2
+let randomPalavra = 0
 let cont = 0;
 let isPlaying = false;
 
