@@ -15,10 +15,12 @@ let palavra = document.getElementById("palavra");
 let tema = ["esporte", "fruta", "animal"];
 let esportes = ["futebol", "basquete", "tênis", "vôlei", "handebol", "boxe", "golfe", "esgrima", "badminton", "ciclismo", "cricket", "rugby", "surfe", "boliche", "atletismo", "beisebol", "canoagem", "dardos"];
 let frutas = ["uva", "banana", "manga", "morango", "abacate", "maçã", "jabuticaba", "abacaxi", "damasco", "goiaba", "laranja", "maracujá", "caju", "laranja", "cereja", "melancia", "ameixa", "coco"];
-let animais = ["rinoceronte", "macaco", "zebra", "cachorro", "rato", "cavalo", "crocodilo", "urso", "girafa", "mosquito", "foca", "raposa", "canguru", "coala", "panda", "castor", "aranha", "borboleta"];
+let animais = ["tartaruga", "macaco", "zebra", "cachorro", "rato", "cavalo", "crocodilo", "urso", "girafa", "mosquito", "foca", "raposa", "canguru", "coala", "panda", "castor", "aranha", "borboleta"];
 
-let randomTema = Math.floor(Math.random() * tema.length);
-let randomPalavra = Math.floor(Math.random() * 16);
+//let randomTema = Math.floor(Math.random() * tema.length);
+let randomTema = 2
+//let randomPalavra = Math.floor(Math.random() * 16);
+let randomPalavra = 0
 
 let cont = 0;
 let isPlaying = false;
@@ -57,7 +59,7 @@ let letras = document.querySelectorAll(".letra");
 
 function LetrasErradas(erro) {
     erro.push(jogada.value);
-    letras_erradas.innerHTML = "Letras erradas: " + erro + ",";
+    letras_erradas.innerHTML = "Letras erradas: " + erro;
     chances--;
     tentativas.innerHTML = "Você tem: " + chances + " tentativa(s)";
 }
