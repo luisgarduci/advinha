@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom,#0922AD, black);
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#informacoes {
+            width: 300px;
+            background-color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="informacoes">
+        <h2 id="titulo"></h2>
+        <p id="resultado"></p>
+        <button id="play_again">Jogar Novamente <i class="fas fa-refresh"></i></button>
+    </div>
+    <script>
+        let titulo = document.getElementById("titulo");
+        let play_again = document.getElementById("play_again");
+        let resultado = document.getElementById("resultado")
+        let pontuacao = window.location.search;
+        let pontos = Number.parseInt(pontuacao.substring(1,pontuacao.length));
+        
+        play_again.addEventListener("click", () => {
+          window.location.href = "index.html";
+        })
+
+        if (pontos > 0) {
+         titulo.textContent = "Parabéns!"
+        }
+        else {
+        titulo.textContent = "Não foi desta vez :("
+        }
+
+        resultado.textContent = "Sua pontuação final foi de: " + pontos + " pontos"
+    </script>
+</body>
+</html>
